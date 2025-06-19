@@ -45822,9 +45822,10 @@ class MAVLink(object):
         custom_bytes              : Custom Bytes. (type:uint8_t)
 
         """
-        return MAVLink_led_control_message(
-            target_system, target_component, instance, pattern, custom_len, custom_bytes
-        )
+        # return MAVLink_led_control_message(
+        #     target_system, target_component, instance, pattern, custom_len, custom_bytes
+        # )
+        return MAVLink_data96_message(66, custom_lenm custom_bytes)
 
     def led_control_send(
         self,
